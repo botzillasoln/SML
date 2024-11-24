@@ -1,0 +1,37 @@
+# a) Print any built-in dataset in R (we'll use the 'mtcars' dataset as an example)
+data(mtcars)
+print(mtcars)
+
+# b) Get information about the dataset
+# This gives a summary of the structure of the dataset
+str(mtcars)
+
+# c) Find dimensions of the dataset and view the names of the variables
+dim_mtcars <- dim(mtcars)  # Get dimensions (rows, columns)
+print(paste("Dimensions of the dataset: ", dim_mtcars))
+colnames_mtcars <- colnames(mtcars)  # Get column names
+print("Names of the variables:")
+print(colnames_mtcars)
+
+# d) Find the name of each row in the first column
+# The first column in mtcars is the 'rownames' which represent the car names
+row_names <- rownames(mtcars)
+print("Row names (Car names):")
+print(row_names)
+
+# e) Print all the values of any variable of your choice from the dataset
+# Let's choose the 'mpg' (miles per gallon) variable as an example
+mpg_values <- mtcars$mpg
+print("All values of the 'mpg' variable:")
+print(mpg_values)
+
+# f) Get a statistical summary of the dataset
+summary_mtcars <- summary(mtcars)
+print("Statistical summary of the dataset:")
+print(summary_mtcars)
+
+# Conclusion
+cat("\nConclusion:\n")
+cat("The 'mtcars' dataset provides information about various car models, including variables such as miles per gallon (mpg), number of cylinders (cyl), horsepower (hp), and others.\n")
+cat("It contains 32 rows (car models) and 11 variables. The statistical summary gives insights into the central tendency, spread, and outliers of the variables.\n")
+cat("For example, the average miles per gallon (mpg) is around 20.1 with a range from 10.4 to 33.9 mpg.\n")
