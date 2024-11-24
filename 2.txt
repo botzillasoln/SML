@@ -1,0 +1,37 @@
+# a) Load and print any built-in dataset (we'll use 'mtcars' dataset)
+data(mtcars)
+print(mtcars)
+
+# b) Calculate Variance for a chosen variable (e.g., 'mpg' - miles per gallon)
+variance_mpg <- var(mtcars$mpg)
+cat("Variance of 'mpg':", variance_mpg, "\n")
+
+# c) Calculate Standard Deviation for the same variable ('mpg')
+std_dev_mpg <- sd(mtcars$mpg)
+cat("Standard Deviation of 'mpg':", std_dev_mpg, "\n")
+
+# d) Calculate Range for the same variable ('mpg')
+range_mpg <- range(mtcars$mpg)
+cat("Range of 'mpg':", range_mpg, "\n")
+
+# e) Calculate Mean Deviation and Skewness for the 'mpg' variable
+# Mean deviation
+mean_mpg <- mean(mtcars$mpg)
+mean_deviation_mpg <- mean(abs(mtcars$mpg - mean_mpg))
+cat("Mean Deviation of 'mpg':", mean_deviation_mpg, "\n")
+
+# Skewness (using the 'e1071' package)
+if (!require(e1071)) install.packages("e1071", dependencies = TRUE)
+library(e1071)
+skewness_mpg <- skewness(mtcars$mpg)
+cat("Skewness of 'mpg':", skewness_mpg, "\n")
+
+Conclusion:
+The statistical analysis of the mpg variable from the mtcars dataset 
+reveals key insights into its distribution. The variance and standard 
+deviation indicate the spread of values, with standard deviation providing
+ a more interpretable measure in the original units. The range shows the extent 
+of the data, while the mean deviation highlights how much individual values
+ deviate from the mean. Skewness reveals the asymmetry of the data distribution,
+ with positive skewness indicating a longer right tail. These measures
+ collectively help understand the variability and shape of the data.
