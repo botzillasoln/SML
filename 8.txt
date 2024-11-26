@@ -1,0 +1,29 @@
+# Function to perform linear extrapolation
+perform_extrapolation <- function(x, y, new_x) {
+  # Fit a linear regression model
+  model <- lm(y ~ x)
+  
+  # Use the model to predict new values based on new_x
+  predicted_y <- predict(model, newdata = data.frame(x = new_x))
+  
+  # Display the linear model coefficients
+  cat("Linear model coefficients:\n")
+  print(coef(model))
+  
+  # Display the extrapolated values
+  cat("\nExtrapolated values for new_x:", new_x, "\n")
+  print(predicted_y)
+}
+
+# Example data: x and y values (e.g., time and corresponding temperature)
+x <- c(1, 2, 3, 4, 5)  # Known x values
+y <- c(2, 4, 6, 8, 10) # Known y values (assumed to be linearly increasing)
+
+# New x values for extrapolation
+new_x <- c(6, 7, 8)  # New values outside the range of the original data
+
+# Call the function to perform extrapolation
+perform_extrapolation(x, y, new_x)
+
+
+Extrapolation is a useful technique for predicting values beyond the observed data range. In this example, we used linear regression to model the relationship between two variables and then applied the model to predict new values for y based on new x values. Extrapolation is commonly used in forecasting, trend analysis, and other predictive modeling tasks, but it should be used with caution, especially when extrapolating far beyond the range of known data, as the assumptions of the model may not hold.

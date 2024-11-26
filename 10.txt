@@ -1,0 +1,43 @@
+# Function to demonstrate Chi-Square distribution operations
+chi_square_demo <- function() {
+  # Degrees of freedom
+  df <- 5
+  
+  # 1. dchisq: Density function
+  x <- 3
+  density <- dchisq(x, df)
+  cat("1. Chi-Square Density at x =", x, "with df =", df, ":\n")
+  cat("Density:", density, "\n\n")
+  
+  # 2. pchisq: Cumulative distribution function
+  x <- 4
+  cumulative_prob <- pchisq(x, df)
+  cat("2. Cumulative Probability P(X <= 4) with df =", df, ":\n")
+  cat("Cumulative Probability:", cumulative_prob, "\n\n")
+  
+  # 3. qchisq: Quantile function
+  prob <- 0.95
+  quantile <- qchisq(prob, df)
+  cat("3. Chi-Square Quantile for P(X <= ?) = 0.95 with df =", df, ":\n")
+  cat("Quantile:", quantile, "\n\n")
+  
+  # 4. rchisq: Random sampling
+  n <- 5
+  random_samples <- rchisq(n, df)
+  cat("4. Random Samples from Chi-Square Distribution with df =", df, ":\n")
+  print(random_samples)
+}
+
+# Call the function
+chi_square_demo()
+
+
+
+conclusion:
+This program demonstrates the key functions for working with the Chi-Square distribution in R:
+
+dchisq calculates the density at a given point.
+pchisq calculates the cumulative probability.
+qchisq finds the quantile for a given probability.
+rchisq generates random samples from the Chi-Square distribution.
+These functions are essential for various statistical analyses, such as hypothesis testing, confidence interval estimation, and Monte Carlo simulations.

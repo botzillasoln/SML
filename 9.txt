@@ -1,0 +1,42 @@
+# Function to generate random samples using different sampling methods
+
+generate_samples <- function() {
+  
+  # Example 1: Simple Random Sampling without Replacement
+  # Sample 5 elements from a population of 1 to 20 (without replacement)
+  population <- 1:20
+  sample_without_replacement <- sample(population, 5)
+  cat("Simple Random Sampling (without replacement):\n")
+  print(sample_without_replacement)
+  
+  # Example 2: Simple Random Sampling with Replacement
+  # Sample 5 elements from a population of 1 to 20 (with replacement)
+  sample_with_replacement <- sample(population, 5, replace = TRUE)
+  cat("\nSimple Random Sampling (with replacement):\n")
+  print(sample_with_replacement)
+  
+  # Example 3: Generating Random Numbers from a Normal Distribution
+  # Sample 5 random numbers from a normal distribution (mean = 0, sd = 1)
+  random_normal_sample <- rnorm(5, mean = 0, sd = 1)
+  cat("\nRandom Sample from Normal Distribution (mean = 0, sd = 1):\n")
+  print(random_normal_sample)
+  
+  # Example 4: Generating Random Numbers from a Uniform Distribution
+  # Sample 5 random numbers from a uniform distribution between 0 and 1
+  random_uniform_sample <- runif(5, min = 0, max = 1)
+  cat("\nRandom Sample from Uniform Distribution (0 to 1):\n")
+  print(random_uniform_sample)
+  
+  # Example 5: Generating Random Integers
+  # Sample 5 random integers between 1 and 100
+  random_integer_sample <- sample(1:100, 5)
+  cat("\nRandom Integer Sample (between 1 and 100):\n")
+  print(random_integer_sample)
+}
+
+# Call the function to generate samples
+generate_samples()
+
+
+
+This program demonstrates several ways to generate samples using sampling functions in R. You can perform simple random sampling (with or without replacement), generate random numbers from various distributions such as the normal and uniform distributions, and generate random integers within a specified range. Sampling is a fundamental operation in statistics and is widely used for simulations, Monte Carlo methods, and resampling techniques like bootstrapping.

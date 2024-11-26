@@ -1,0 +1,30 @@
+# Function to perform Spearman Rank Correlation Test
+perform_spearman_test <- function(x, y) {
+  # Perform Spearman Correlation Test
+  test_result <- cor.test(x, y, method = "spearman")
+  
+  # Display results
+  cat("Spearman Rank Correlation Coefficient:", round(test_result$estimate, 3), "\n")
+  cat("P-value:", format(test_result$p.value, scientific = TRUE), "\n")
+  
+  # Interpret the result
+  if (test_result$p.value < 0.05) {
+    cat("Conclusion: The correlation is statistically significant.\n")
+  } else {
+    cat("Conclusion: The correlation is not statistically significant.\n")
+  }
+}
+
+# Example usage
+# Replace these values with your data
+x <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+y <- c(2.1, 4.5, 6.2, 7.9, 9.4, 12.0, 14.2, 16.0, 17.9, 20.3)
+
+# Call the function
+perform_spearman_test(x, y)
+
+
+
+The Spearman Rank Correlation Test evaluates the strength and direction of a monotonic relationship between two variables using their ranks. The test provides a correlation coefficient (
+𝜌
+ρ) ranging from -1 to 1, where values near 1 indicate a strong positive relationship, values near -1 indicate a strong negative relationship, and values near 0 suggest little or no monotonic association. Additionally, the p-value assesses the statistical significance of the observed correlation. If the p-value is less than 0.05, the correlation is considered statistically significant, implying that the observed relationship is unlikely due to chance. Conversely, a p-value greater than 0.05 indicates that the relationship is not statistically significant.

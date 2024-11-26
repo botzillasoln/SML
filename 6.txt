@@ -1,0 +1,25 @@
+# Function to calculate conditional probability P(A|B)
+calculate_conditional_probability <- function(P_A_and_B, P_B) {
+  # Conditional probability P(A|B) = P(A ∩ B) / P(B)
+  P_A_given_B <- P_A_and_B / P_B
+  cat("Conditional Probability P(A|B):", P_A_given_B, "\n")
+}
+
+# Example: Let's assume the following
+# P(A ∩ B) = 0.12 (Probability of both A and B happening)
+# P(B) = 0.4 (Probability of event B happening)
+
+P_A_and_B <- 0.12  # Probability of both A and B happening
+P_B <- 0.4         # Probability of event B
+
+# Call the function
+calculate_conditional_probability(P_A_and_B, P_B)
+
+
+In conclusion, conditional probability helps us calculate the likelihood of an event occurring, given that another event has already happened. It allows us to refine our predictions based on additional information. For example, if we know that event B has occurred, conditional probability helps us determine how likely event A is to occur under that condition. The calculation involves taking the probability of both events happening together and dividing it by the probability of event B occurring. This concept is widely used in various fields such as statistics, risk assessment, and decision-making processes.
+
+
+
+
+
+

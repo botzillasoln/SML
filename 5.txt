@@ -1,0 +1,24 @@
+# Function to calculate probability of getting heads from a fair coin flip
+calculate_coin_probability <- function() {
+  # Probability of heads for a fair coin
+  probability_heads <- 1 / 2
+  cat("Probability of getting heads when flipping a fair coin:", probability_heads, "\n")
+}
+
+# Function to calculate probability of drawing a spade from a standard deck
+calculate_spade_probability <- function() {
+  # Total number of cards in a deck
+  total_cards <- 52
+  # Total number of spades in a deck
+  spades <- 13
+  # Probability of drawing a spade
+  probability_spade <- spades / total_cards
+  cat("Probability of drawing a spade from a standard deck of 52 cards:", probability_spade, "\n")
+}
+
+# Call the functions
+calculate_coin_probability()
+calculate_spade_probability()
+
+
+In conclusion, the probability of getting heads when flipping a fair coin is 0.5, as there are two equally likely outcomes—heads or tails—making the chance of getting heads 50%. Similarly, the probability of drawing a spade from a standard deck of 52 cards is 0.25, because there are 13 spades in the deck, and the total number of cards is 52, resulting in a 25% chance of drawing a spade. These probabilities reflect basic concepts of equally likely outcomes, where the coin flip offers two possibilities and the deck contains four suits of 13 cards each.

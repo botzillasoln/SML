@@ -1,0 +1,21 @@
+# Function to calculate the posterior probability using Bayes' Theorem
+calculate_bayes_theorem <- function(P_B_given_A, P_A, P_B) {
+  # Applying Bayes' Theorem: P(A|B) = (P(B|A) * P(A)) / P(B)
+  P_A_given_B <- (P_B_given_A * P_A) / P_B
+  cat("Posterior Probability P(A|B):", P_A_given_B, "\n")
+}
+
+# Example values
+# P(B|A) = 0.8 (Probability of observing B given A)
+# P(A) = 0.6 (Prior probability of event A)
+# P(B) = 0.7 (Total probability of event B)
+
+P_B_given_A <- 0.8  # Likelihood
+P_A <- 0.6          # Prior probability
+P_B <- 0.7          # Marginal likelihood
+
+# Call the function
+calculate_bayes_theorem(P_B_given_A, P_A, P_B)
+
+
+Bayes' Theorem is a powerful tool for updating the probability of an event based on new information or evidence. It allows us to refine our predictions by considering both prior knowledge (the probability of the event before new evidence) and the likelihood of observing new evidence given the event. In the example, given the likelihood of observing event B when event A occurs, the prior probability of event A, and the total probability of event B, we calculated the updated or posterior probability of event A. This method is widely used in fields such as statistics, machine learning, and decision-making, helping us make more informed judgments based on available data.
