@@ -25,4 +25,12 @@ perform_spearman_test(x, y)
 
 
 
-The Spearman Rank Correlation Test evaluates the strength and direction of a monotonic relationship between two variables using their ranks. The test provides a correlation coefficient (ρ) ranging from -1 to 1, where values near 1 indicate a strong positive relationship, values near -1 indicate a strong negative relationship, and values near 0 suggest little or no monotonic association. Additionally, the p-value assesses the statistical significance of the observed correlation. If the p-value is less than 0.05, the correlation is considered statistically significant, implying that the observed relationship is unlikely due to chance. Conversely, a p-value greater than 0.05 indicates that the relationship is not statistically significant.
+The Spearman Rank Correlation Test evaluates the strength and direction of a monotonic
+relationship between two variables using their ranks. The test provides a correlation 
+coefficient (ρ) ranging from -1 to 1, where values near 1 indicate a strong positive 
+relationship, values near -1 indicate a strong negative relationship, and values near 
+0 suggest little or no monotonic association. Additionally, the p-value assesses the 
+statistical significance of the observed correlation. If the p-value is less than 0.05,
+the correlation is considered statistically significant, implying that the observed 
+relationship is unlikely due to chance. Conversely, a p-value greater than 0.05 indicates 
+that the relationship is not statistically significant.
